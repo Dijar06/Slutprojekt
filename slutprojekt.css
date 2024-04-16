@@ -2,6 +2,23 @@ body{
     background-color: rgb(51, 51, 51);
 }
 
+#formulär section{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+}
+
+fieldset{
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+legend{
+    font-size: larger;
+}
+
 .wrapper{
     display: grid;
     grid-template-rows: 100px auto auto 40px;
@@ -14,6 +31,8 @@ body{
 
 header{
     grid-area: header;
+    display: block;
+    margin: auto;
 }
 
 nav{
@@ -29,6 +48,7 @@ nav > ul{
 nav li{
     text-align: center;
     list-style-type: none;
+    font-size: 3vw;
 }
 
 main{
@@ -47,13 +67,14 @@ header > img{
 
 h1{
     text-align: center;
-    font-size: 70px;
+    font-size: 5vw;
 }
 
-main p{
-    font-size: 30px;
-    margin-left: 20%;
-    margin-right: 20%
+h1 + p{
+    font-size: 3vw;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%
 }
 
 footer p{
