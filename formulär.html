@@ -22,54 +22,59 @@
                 <section>
                     <form action="formulärsvar.html" method="get">
                         <fieldset>
-                        <legend>Vem är du?</legend>
-                        <p>
-                        <label for="namn">Namn:</label>
-                        <input type="text" name="namn" id="namn" required placeholder="Förnamn Efternamn"><br>
-                    </p>
-                    <p>
-                        <label for="lösenord">Lösenord:</label>
-                        <input type="password" name="lösenord" id="lösenord" required><br>
-                    </p>
-                    <p>
-                        <label for="email">Mejladress:</label>  
-                        <input type="email" name="email" id="email" required placeholder="exempel@gmail.com"><br>
-                    </p>
-                    <p>
-                        <label for="telefon">Telefon:</label>  
-                        <input type="tel" name="telefon" id="telefon" required placeholder="123456789"><br>
-                    </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Textarea</legend>
-                        <p>
-                            <label for="text">Text:</label>
-                            <textarea id="text" name="text" required placeholder="Skriv ditt meddelande."></textarea>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <p>
-                            <label for=""></label>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <p>
-                            <input value="skicka" type="submit">
-                        </p>
-                    </fieldset>
-                        <p>Vad blir 1+1:</p>
-                        <input type="radio" name="radio" id="2" value="2"><label for="2">2</label><br>
-                        <input type="radio" name="radio" id="11" value="11"><label for="11">11</label><br>
-                        <p>Mår du bra?</p>
-                        <input type="checkbox" name="checkbox" id="ja" value="ja"><label for="ja">ja</label><br>
-                        <input type="checkbox" name="checkbox" id="nej" value="nej"><label for="nej">nej</label><br>
-                        <p>Sveriges huvudstad:</p>
-                        <select name="stad">
-                            <option value="stockholm">Stockholm</option>
-                            <option value="göteborg">Göteborg</option>
-                            <option value="malmö">Malmö</option>
-                        </select><br>
-                        <input type="submit" value="Skicka">
+                            <legend>Vem är du?</legend>
+                            <p>
+                                <label for="namn">Namn:</label>
+                                <input type="text" name="namn" id="namn" required placeholder="Förnamn Efternamn"><br>
+                            </p>
+                            <p>
+                                <label for="lösenord">Lösenord:</label>
+                                <input type="password" name="lösenord" id="lösenord" required><br>
+                            </p>
+                            <p>
+                                <label for="email">Mejladress:</label>  
+                                <input type="email" name="email" id="email" required placeholder="exempel@gmail.com"><br>
+                            </p>
+                            <p>
+                                <label for="telefon">Telefon:</label>  
+                                <input type="tel" name="telefon" id="telefon" required placeholder="123456789"><br>
+                            </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Feedback</legend>
+                            <p>
+                                <label for="rating">Ange antal stjärnor:</label><br>
+                                <input type="radio" name="rating" id="1" value="1" checked><label for="1">1</label><br>
+                                <input type="radio" name="rating" id="2" value="2"><label for="2">2</label><br>
+                                <input type="radio" name="rating" id="3" value="3"><label for="3">3</label><br>
+                                <input type="radio" name="rating" id="4" value="4"><label for="4">4</label><br>
+                                <input type="radio" name="rating" id="5" value="5"><label for="5">5</label><br>
+                            </p>
+                            <p>
+                                <label for="sidor">Ange vilken/vilka sidor du tyckte var dålig:</label><br>
+                                <input type="checkbox" name="sidor" id="startsida" value="startsida"><label for="startsida">Startsida</label><br>
+                                <input type="checkbox" name="sidor" id="produkter" value="produkter"><label for="produkter">Produkter</label><br>
+                                <input type="checkbox" name="sidor" id="feedback" value="feedback"><label for="feedback">Feedback</label><br>
+                            </p>
+                            <p>
+                                <label for="dropdown">Välj bäst passande alternativ:</label>
+                                <select id="dropdown" name="dropdown">
+                                <option value="design">Dålig design</option>
+                                <option value="produkter">Dåliga produkter</option>
+                                <option value="långsam">Långsam sida</option>
+                                <option value="inget" selected>Inget av ovanstående</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="övrigt">Övriga tankar:</label>
+                                <textarea id="övrigt" name="övrigt" placeholder="Skriv ditt meddelande."></textarea>
+                            </p>
+                        </fieldset>
+                        <fieldset>
+                            <p>
+                                <input value="skicka" type="submit">
+                            </p>
+                        </fieldset>
                     </form>
                 </section>
             </main>
