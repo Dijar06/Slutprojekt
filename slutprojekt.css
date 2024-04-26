@@ -19,9 +19,9 @@ legend{
     font-size: larger;
 }
 
-.wrapper{
+#nav1 .wrapper{
     display: grid;
-    grid-template-rows: 100px auto auto 40px;
+    grid-template-rows: 100px auto auto auto;
     grid-template-areas:
     "header"
     "nav"
@@ -29,9 +29,19 @@ legend{
     "footer";
 }
 
+#nav2 .wrapper{
+    display: grid;
+    grid-template-rows: 100px auto auto auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "nav2"
+    "main"
+    "footer";
+}
+
 header{
     grid-area: header;
-    display: block;
     margin: auto;
 }
 
@@ -48,7 +58,11 @@ nav > ul{
 nav li{
     text-align: center;
     list-style-type: none;
-    font-size: 3vw;
+    font-size: 2vw;
+}
+
+nav:last-of-type{
+    grid-area: nav2;
 }
 
 main{
@@ -61,8 +75,7 @@ footer{
 }
 
 header > img{
-    max-width: 99%;
-    height: 100%;
+    height: 10vh;
 }
 
 h1{
@@ -79,6 +92,7 @@ h1 + p{
 
 footer p{
     margin: 0;
+    font-size: 2vw;
 }
 
 @media screen and (min-width: 800px){
@@ -88,4 +102,10 @@ footer p{
 input[type="submit"]{
     display: block;
     margin: auto;
+}
+
+iframe{
+    width: 50vw;
+    height: 30vh;
+    border: none;
 }
