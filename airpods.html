@@ -1,59 +1,59 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
-        <title>Airpods</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="slutprojekt.css" rel="stylesheet">
+<!DOCTYPE html> <!--HTML5 dokument-->
+<html lang="sv"> <!--HTML öppning med språk svenska-->
+    <head> <!--Metadata-->
+        <title>Airpods</title> <!--Sidans titel-->
+        <meta charset="UTF-8"> <!--Användning av specialtecken-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsiv webbdesign-->
+        <link href="slutprojekt.css" rel="stylesheet"> <!--Extern CSS-->
     </head>
-    <body id="tvåspalt"> <!--Design avviker från andra sidor, 2 sektions--> 
-        <div class="wrapper">
-            <header>
-                <h1>Airpods</h1>
-                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" />
+    <body id="tvåspalt"> <!--Gör en ID för att design avviker från andra sidor, 2 sektions--> 
+        <div class="wrapper"> <!--Container, grid layout-->
+            <header> <!--Sidhuvud-->
+                <h1>Airpods</h1> <!--Huvudrubrik 1-->
+                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"> <!--SVG bild med höjden och bredden 100px-->
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" /> <!--Cirkelns x och y koordinat 50 enheter, färgen svart på cirkelns omkrets, bredd på cirkelns omkerts är 5 enheter, fyll cirkeln med färgen vit-->
                 </svg>
             </header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Startsida</a></li>
-                    <li><a href="produkter.html">Produkter</a></li>
-                    <li><a href="formulär.html">Feedback</a></li>
+            <nav> <!--Globala menyn-->
+                <ul> <!--Oordnad lista-->
+                    <li><a href="index.html">Startsida</a></li> <!--Listelement, klickbar text till startsidan-->
+                    <li><a href="produkter.html">Produkter</a></li> <!--Listelement, klickbar text till produkter-->
+                    <li><a href="formulär.html">Feedback</a></li> <!--Listelement, klickbar text till formulär-->
                 </ul>
             </nav>
-            <nav>
-                <ul>
-                    <li><a href="iphone16.html">iPhone 16</a></li>
-                    <li><a href="iphone1.html">iPhone 1</a></li>
-                    <li><a href="airpods.html">Airpods</a></li>
+            <nav> <!--Lokal meny-->
+                <ul> <!--Oordnad lista-->
+                    <li><a href="iphone16.html">iPhone 16</a></li> <!--Listelement, klickbar text till iPhone 16-->
+                    <li><a href="iphone1.html">iPhone 1</a></li> <!--Listelement, klickbar text till iPhone 1-->
+                    <li><a href="airpods.html">Airpods</a></li> <!--Listelement, klickbar text till Airpods-->
                 </ul>
             </nav>
-            <main>
-                <section>
-                    <article>
-                        <h2>iPhone 1</h2>
-                        <p>AirPods drivs av Apples H1-chip för hörlurar som ger snabb och stabil trådlös anslutning till dina enheter. H1-chippet driver även röstaktiverad Siri-åtkomst och ger upp till 30 procent lägre latens i spel. Det innebär att du får bättre ljudkvalitet, oavsett om du lyssnar på musik och poddar eller spelar spel. För nuläget finns tre olika typer av airpods:</p>
+            <main> <!--Huvudinnehåll-->
+                <section> <!--Avdelning-->
+                    <article> <!--Element som grupperar enskilt innehåll-->
+                        <h2>iPhone 1</h2> <!--Huvudrubrik 2-->
+                        <p>AirPods drivs av Apples H1-chip för hörlurar som ger snabb och stabil trådlös anslutning till dina enheter. H1-chippet driver även röstaktiverad Siri-åtkomst och ger upp till 30 procent lägre latens i spel. Det innebär att du får bättre ljudkvalitet, oavsett om du lyssnar på musik och poddar eller spelar spel. För nuläget finns tre olika typer av airpods:</p> <!--Stycke-->
                         <ol type="I" start="1"> <!--Numrerad lista. Använder romerska siffror, börjar på 1--> 
-                            <li>AirPods 2nd Generation</li>
-                            <li>AirPods 3rd Generation with Lightning Charging Case</li>
-                            <li>AirPods Pro 2nd generation</li>
+                            <li>AirPods 2nd Generation</li> <!--Listelement-->
+                            <li>AirPods 3rd Generation with Lightning Charging Case</li> <!--Listelement-->
+                            <li>AirPods Pro 2nd generation</li> <!--Listelement-->
                         </ol>
-                        <audio controls> 
+                        <audio controls> <!--Infoga ljud-->
                             <source src="Airpods.mp3" type="audio/mp3"> <!--Typ: ljud mp3--> 
                             <p>Din webbläsare stödjer inte detta audio element.</p> <!--Text som förklarar innehållet för dem vars webbläsare inte stödjer HTML5-audio--> 
                         </audio>
                     </article>
                 </section>
+                <section> <!--Avdelning-->
                     <figure> <!--Grupperar bild med tillhörande bildtext-->
-                        <img src="airpodsbild.jpeg" alt="Bild på Airpods"> <!--Bild i form av JPG, optimerad, alternativt visas "Bild på Airpods" för användare som inte kan se bilden-->
+                        <img src="airpodsbild.jpeg" alt="Bild på Airpods"> <!--Bild i form av JPEG, optimerad, alternativt visas "Bild på Airpods" för användare som inte kan se bilden-->
                         <figcaption>3 olika Airpods</figcaption> <!--Bildens bildtext-->
                     </figure>
-                <section>
                 </section>
             </main>
-            <footer>
-                <p>Copyright © 2024 Apple Inc. Alla rättigheter förbehålls.</p>
-                <p>Telefon: 123456789</p>
+            <footer> <!--Sidfot-->
+                <p>Copyright © 2024 Apple Inc. Alla rättigheter förbehålls.</p> <!--Stycke-->
+                <p>Telefon: 123456789</p> <!--Stycke-->
             </footer>
         </div>
     </body>

@@ -1,6 +1,6 @@
 @font-face{ /*Definierar ett anpassat typsnitt med namnet 'roboto'*/
-    font-family: 'roboto';
-    src: url(Roboto-Bold.ttf);
+    font-family: 'roboto'; /*Teckensnitt*/
+    src: url(Roboto-Bold.ttf); /*Vart teckensnittet kan hittas*/
 }
 
 body{
@@ -18,10 +18,10 @@ body{
     "footer";
 }
 
-#tvåspalt .wrapper{
-    display: grid;
-    grid-template-rows: 100px auto auto auto auto; /*Extra nav*/
-    grid-template-areas:
+#tvåspalt .wrapper{ /*Klass som påverkas endast av sidor som har ID tvåspalt i body*/
+    display: grid; /*Gridlayout*/
+    grid-template-rows: 100px auto auto auto auto; /*4 rader, header är 100 pixlar, nav är auto vilket anpassar sig till innehållet, en till nav som är en lokal meny, main är auto, footer är auto*/
+    grid-template-areas: /*Ordning på sidan, toppen är header och botten är footer*/
     "header"
     "nav"
     "nav2" /*Extra nav, lokala menyn*/
@@ -35,14 +35,14 @@ header{
 }
 
 nav{
-    grid-area: nav;
-    background-color: white;
+    grid-area: nav; /*Gridområde*/ 
+    background-color: white; /*Bakgrundsfärg*/
     border-radius: 1em; /*Runda hörn, 100%*/
     border: 5px solid black; /*En svart kant med tjockleken 5 pixlar runt elementen*/
 }
 
 #tvåspalt nav:last-of-type{ /*Avkomlingsselektor, sista naven som ligger i en body med id tvåspalt*/
-    grid-area: nav2;
+    grid-area: nav2; /*Gridområde*/
 }
 
 nav > ul{ /*Barnselektor, ul direkt inuti nav*/
@@ -50,136 +50,136 @@ nav > ul{ /*Barnselektor, ul direkt inuti nav*/
     flex-direction: column; /*Rikningen för flex-containern blir till kolumn*/
 }
 
-nav li{
+nav li{ /*Avkomlingsselektor*/
     text-align: center; /*Centrera text*/
     list-style-type: none; /*Punkterna i listan tas bort, ingen stil*/
     font-size: 2vw; /*Fontstorlek i förhållande till vybredden*/
 }
 
 main{
-    grid-area: main;
+    grid-area: main; /*Gridområde*/
 }
 
 footer{
-    grid-area: footer;
-    background-color: white;
-    border-radius: 1em;
-    border: 5px solid black;
+    grid-area: footer; /*Gridområde*/
+    background-color: white; /*Bakgrundsfärg*/
+    border-radius: 1em; /*Runda hörn, 100%*/
+    border: 5px solid black; /*En svart kant med tjockleken 5 pixlar runt elementen*/
 }
 
-#formulär section{
+#formulär section{ /*Section som påverkas endast av sidan med ID "formulär" i body*/
     margin-top: 5ex; /*Marginal på övre delen 5 stycken höjder på lilla x*/
-    display: flex;
+    display: flex; /*Flexlayout*/
     justify-content: center; /*Centrera innehållet horisontellt*/
-    font-size: 3vw;
+    font-size: 3vw; /*Fontstorlek i förhållande till vybredden*/
 }
 
 fieldset{
     padding: 1em; /*Ytterfyllnad*/
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 10px; /*Runda hörn, 10 px*/
+    margin-bottom: 10px; /*Marginal på botten är 10px*/
 }
 
 legend{
     font-size: larger; /*Ställer in en större fontstorlek än vanligt*/
 }
 
-input[type="submit"], svg, audio, iframe, img{ /*Gruppering*/
+input[type="submit"], svg, audio, iframe, img{ /*Gruppering av selektorer*/
     display: block; /*Blocklayout*/
-    margin: auto;
+    margin: auto; /*Marginal runt tabelllen anpassas automatiskt, vilket gör att det centreras i sin sektion*/
 }
 
-p, a, li, figcaption{
-    font-size: 2vw;
-    text-align: center;
+p, a, li, figcaption{ /*Gruppering av selektorer*/
+    font-size: 2vw; /*Fontstorlek i förhållande till vybredden*/
+    text-align: center; /*Centrera text*/
 }
 
 p::after{ /*Efter varje stycke ska följande text visas*/
     content: " ©";
 }
 
-p::first-letter{ /*Pseudoelement*/
+p::first-letter{ /*Pseudoelement, första bokstaven*/
     font-size: 2.5rem; /*Första bokstaven i varje stycke får storlek 2.5 gånger så mycket som rotelementet*/
 }
 
 h2{
-    text-align: center;
-    font-size: 5vw;
+    text-align: center; /*Centrera text*/
+    font-size: 5vw; /*Fontstorlek i förhållande till vybredden*/
 }
 
 h2 ~ p{ /*Syskonselektor, stycke som befinner sig efter huvudrubrik 1*/
-    font-size: 3vw;
-    text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    font-size: 3vw; /*Fontstorlek i förhållande till vybredden*/
+    text-align: center; /*Centrera text*/
+    margin-left: 30%; /*Marginal på vänster sida är 30%*/
+    margin-right: 30%; /*Marginal på höger sida är 30%*/
     transition: 1s; /*Övergångseffekt med 1 sekunds varaktighet*/
 }
 
-footer > p{
-    margin: 0;
+footer > p{ /*Barnselektor*/
+    margin: 0; /*Ingen marginal runt stycket*/
     text-align: left; /*Texten blir vänsterjusterad*/
-    transition: 1s;
+    transition: 1s; /*Övergångseffekt med 1 sekunds varaktighet*/
 }
 
 iframe{
-    width: 50vw;
-    height: 30vh; /*Fontstorlek i förhållande till vyhöjden*/
+    width: 50vw; /*Storlek i förhållande till vybredden*/
+    height: 30vh; /*Storlek i förhållande till vyhöjden*/
     border: none; /*Tar bort ramen runt iframe*/
 }  
 
-audio, audio source{
-    width: 35vw;
+audio, audio source{ /*Gruppering av selektorer*/
+    width: 35vw; /*Storlek i förhållande till vybredden*/
 }
 
 img{
-    width: 50vw;
-    height: 20vh;
+    width: 50vw; /*Storlek i förhållande till vybredden*/
+    height: 20vh; /*Storlek i förhållande till vyhöjden*/
 }
 
 dl{
-    font-size: 3vw;
+    font-size: 3vw; /*Fontstorlek i förhållande till vybredden*/
 }
 
-table,td,th{
-    height: 5vh;
-    width: 50vw;
-    font-size: 2vw;
-    border: 1px solid white; 
+table,td,th{ /*Gruppering av selektorer*/
+    height: 5vh; /*Storlek i förhållande till vyhöjden*/
+    width: 50vw; /*Storlek i förhållande till vybredden*/
+    font-size: 2vw; /*Fontstorlek i förhållande till vybredden*/
+    border: 1px solid white; /*En vit kant med tjockleken 1 pixel runt elementen*/
     border-collapse: collapse; /*Linjerna i border går ihop till en enda*/
 }
 
-table, figure{
-    margin: auto;
+table, figure{ /*Gruppering av selektorer*/
+    margin: auto; /*Marginal runt tabelllen anpassas automatiskt, vilket gör att det centreras i sin sektion*/
 }
 
 tr:nth-child(even){ /*Pseudoklass. Zebrastriping, varje jämn tabellrad får färgen aquamarine*/
-    background-color: aquamarine;
+    background-color: aquamarine; /*Bakgrundsfärg*/
 }
 
 tr:nth-child(odd){ /*Zebrastriping, varje udda tabellrad får färgen grå*/
-    background-color: #808080;
+    background-color: #808080; /*Bakgrundsfärg*/
 }
 
-td:nth-child(1){
+td:nth-child(1){ /*Pseudoklass, första kolumn*/
     vertical-align: top; /*Varje första kolumn ska justeras till toppen vertikalt, alltså inte centreras*/
 }
 
-td:nth-child(2){
-    text-align: right;
+td:nth-child(2){ /*Pseudoklass, andra kolumn*/
+    text-align: right; /*Texten blir högerjusterad*/
     vertical-align: bottom; /*Varje andra kolumn ska justeras till botten vertikalt*/
 }
 
-th, td {
-    padding: 15px;
+th, td { /*Gruppering av selektorer*/
+    padding: 15px; /*Ytterfyllnad, 15px*/
 }
 
 caption{
-    margin: 12px;
+    margin: 12px; /*Marginal runt om, 12px*/
 }
 
 a{
-    margin: 1%;
-    transition: 2s;
+    margin: 1%; /*Marginal runt om, 1%*/
+    transition: 2s; /*Övergångseffekt med 2 sekunders varaktighet*/
 }
 
 a:link{
@@ -205,45 +205,45 @@ a:active{
 }
 
 article{
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
+    border: 2px solid black; /*En svart kant med tjockleken 2 pixlar runt elementen*/
+    display: flex; /*Flexlayout*/
+    justify-content: center; /*Centrera innehållet horisontellt*/
+    align-items: center; /*Centrera innehåll*/
+    flex-direction: column; /*Rikningen för flex-containern blir till kolumn*/
+    padding: 10px; /*Ytterfyllnad, 10px*/
     margin-left: 10ch; /*Marginal på vänstra delen 10 stycken bredder på siffran 0*/
-    margin-right: 10ch;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 1em;
+    margin-right: 10ch; /*Marginal på högra delen 10 stycken bredder på siffran 0*/
+    margin-top: 5%; /*Marginal på övre delen, 5%*/
+    margin-bottom: 5%; /*Marginal på undre delen, 5%*/
+    border-radius: 1em; /*Runda hörn, 100%*/
 }
 
 h1{
-    display: none;
+    display: none; /*Visar inte huvudrubriken*/
 }
 
 @media screen and (min-width: 800px){ /*Ifall skärmstorleken har större bredd än 800 pixlar gäller nedanstående regler*/
-    #tvåspalt main{
-        display: grid;
+    #tvåspalt main{ /*Main som påverkas endast av sidor som har ID tvåspalt i body*/
+        display: grid; /*Gridlayout*/
         grid-template-columns: 1fr 1fr; /*Två kolumner med lika stor bred*/
     }
 
-    #trespalt main{
-        display: grid;
+    #trespalt main{ /*Main som påverkas endast av sidor som har ID trespalt i body*/
+        display: grid; /*Gridlayout*/
         grid-template-columns: 1fr 1fr 1fr; /*Tre kolumner med lika stor bred*/
     }
 
-    #tvåspalt h1 + p{
-        margin-left: 10%;
-        margin-right: 10%
+    #tvåspalt h2 + p{
+        margin-left: 10%; /*Marginal på vänstersida, 10%*/
+        margin-right: 10% /*Marginal på högersida, 10%*/
     }
 
-    #tvåspalt dl{
-        text-align: left;
+    #tvåspalt dl{ /*Beskrivningslista som påverkas endast av sidor som har ID trespalt i body*/
+        text-align: left; /*Texten blir vänsterjusterad*/
     }
 
     nav > ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid; /*Gridlayout*/
+        grid-template-columns: 1fr 1fr 1fr; /*Tre kolumner med lika stor bred*/
     }
 }

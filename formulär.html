@@ -1,61 +1,61 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
-        <title>Feedback</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="slutprojekt.css" rel="stylesheet">
+<!DOCTYPE html> <!--HTML5 dokument-->
+<html lang="sv"> <!--HTML öppning med språk svenska-->
+    <head> <!--Metadata-->
+        <title>Feedback</title> <!--Sidans titel-->
+        <meta charset="UTF-8"> <!--Användning av specialtecken-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsiv webbdesign-->
+        <link href="slutprojekt.css" rel="stylesheet"> <!--Extern CSS-->
     </head>
     <body id="formulär">
-        <div class="wrapper">
-            <header>
-                <h1>Feedback</h1>
-                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" />
+        <div class="wrapper"> <!--Container, grid layout-->
+            <header> <!--Sidhuvud-->
+                <h1>Feedback</h1> <!--Huvudrubrik 1-->
+                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"> <!--SVG bild med höjden och bredden 100px-->
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" /> <!--Cirkelns x och y koordinat 50 enheter, färgen svart på cirkelns omkrets, bredd på cirkelns omkerts är 5 enheter, fyll cirkeln med färgen vit-->
                 </svg>
             </header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Startsida</a></li>
-                    <li><a href="produkter.html">Produkter</a></li>
-                    <li><a href="formulär.html">Feedback</a></li>
+            <nav> <!--Globala menyn-->
+                <ul> <!--Oordnad lista-->
+                    <li><a href="index.html">Startsida</a></li> <!--Listelement, klickbar text till startsidan-->
+                    <li><a href="produkter.html">Produkter</a></li> <!--Listelement, klickbar text till produkter-->
+                    <li><a href="formulär.html">Feedback</a></li> <!--Listelement, klickbar text till formulär-->
                 </ul>
             </nav>
-            <main>
-                <section>
-                    <form action="formulärsvar.html" method="post"> <!--Formulär, data skickas till formulärsvar.html. Data syns i urlen-->
+            <main> <!--Huvudinnehåll-->
+                <section> <!--Avdelning-->
+                    <form action="formulärsvar.html" method="post"> <!--Formulär, data skickas genom post. Användaren tas till formulärsvar.html.-->
                         <fieldset> <!--Grupperar relaterade fält-->
                             <legend>Vem är du?</legend> <!--Titel för grupperingen-->
                             <p>
                                 <label for="namn">Namn:</label> <!--Textetikett för element med ID namn, lättare att navigera för funktionsnedsatta-->
-                                <input type="text" name="namn" id="namn" required placeholder="Förnamn Efternamn"><br> <!--Text. Name används av webbservern. ID används för att länka ihop elementet med label. Required säger att användaren måste fylla i för att skicka. Placeholder förhandsvisar i rutan-->
+                                <input type="text" name="namn" id="namn" required placeholder="Förnamn Efternamn"><br> <!--Text. Name används av webbservern. ID används för att länka ihop elementet med label. Required säger att användaren måste fylla i för att skicka. Placeholder förhandsvisar text i rutan-->
                             </p>
                             <p>
-                                <label for="email">Mejladress:</label> 
-                                <input type="email" name="email" id="email" list="mejllista" required><br> <!--Mejlformat--> 
-                                <datalist id="mejllista"> <!--Lista med alternativ för mejladdress--> 
-                                    <option value="@gmail.com">
-                                    <option value="@hotmail.com">
-                                    <option value="@outlook.com">
+                                <label for="email">Mejladress:</label> <!--Textetikett för element med ID email-->
+                                <input type="email" name="email" id="email" list="mejllista" required><br> <!--Mejlformat. Måste fyllas i--> 
+                                <datalist id="mejllista"> <!--Lista med alternativ för mejladdress, användaren måste fortfarande skriva i sin egna, dessa är bara exempel på olika mail--> 
+                                    <option value="@gmail.com"> <!--Första val-->
+                                    <option value="@hotmail.com"> <!--Andra val-->
+                                    <option value="@outlook.com"> <!--Tredje val-->
                                 </datalist>
                             </p>
                             <p>
-                                <label for="lösenord">Lösenord:</label>
-                                <input type="password" name="lösenord" id="lösenord" required><br> <!--Lösenordsformat, texten syns inte när man fyller i, endast punkter syns.--> 
+                                <label for="lösenord">Lösenord:</label> <!--Textetikett för element med ID lösenord-->
+                                <input type="password" name="lösenord" id="lösenord" required><br> <!--Lösenordsformat, texten syns inte när man fyller i, endast punkter syns. Måste fyllas i--> 
                             </p>
                             <p>
-                                <label for="telefon">Telefon:</label>  
-                                <input type="tel" name="telefon" id="telefon" required placeholder="Endast siffror 0-9, 9 siffror" pattern="[0-9]{9}"><br> <!--Telefonformat. Pattern gör så att endast siffror 0-9 kan användas. Ska vara totalt 9 tecken.--> 
+                                <label for="telefon">Telefon:</label> <!--Textetikett för element med ID telefon--> 
+                                <input type="tel" name="telefon" id="telefon" required placeholder="Endast siffror 0-9, 9 siffror" pattern="[0-9]{9}"><br> <!--Telefonformat. Pattern gör så att endast siffror 0-9 kan användas. Ska vara totalt 9 tecken. Måste fyllas i, förhandvisar text i rutan--> 
                             </p>
                             <p>
-                                <label for="datum">Ange datum mellan 1991-01-01 och 2010-01-01 för att bekräfta att du inte är robot:</label>
-                                <input type="date" name="datum" id="datum" min="1991-01-02" max="2009-12-31" required><br> <!--Datumformat, tidigaste datumet och senaste datumet bestämt. Tidigare eller senare än dem kan ej väljas.--> 
+                                <label for="datum">Ange datum mellan 1991-01-01 och 2010-01-01 för att bekräfta att du inte är robot:</label> <!--Textetikett för element med ID datum-->
+                                <input type="date" name="datum" id="datum" min="1991-01-02" max="2009-12-31" required><br> <!--Datumformat, tidigaste datumet och senaste datumet bestämt. Tidigare eller senare än dem kan ej väljas. Måste fyllas i--> 
                             </p>
                         </fieldset>
-                        <fieldset>
-                            <legend>Feedback</legend>
+                        <fieldset> <!--Grupperar relaterade fält-->
+                            <legend>Feedback</legend> <!--Titel för grupperingen-->
                             <p>
-                                Ange antal stjärnor:<br>
+                                Ange antal stjärnor:<br> <!--Stycke istället för label, annars valideringsfel-->
                                 <input type="radio" name="rating" id="1" value="1" checked><label for="1">1</label><br> <!--Värde bestämt. Radio = endast en punkt av följande 5 kan markeras. Checked gör att detta blir förval när sidan laddas--> 
                                 <input type="radio" name="rating" id="2" value="2"><label for="2">2</label><br>
                                 <input type="radio" name="rating" id="3" value="3"><label for="3">3</label><br>
@@ -63,26 +63,26 @@
                                 <input type="radio" name="rating" id="5" value="5"><label for="5">5</label><br>
                             </p>
                             <p>
-                                Ange vilken/vilka sidor du tyckte var dålig:<br>
+                                Ange vilken/vilka sidor du tyckte var dålig:<br> <!--Stycke istället för label, annars valideringsfel-->
                                 <input type="checkbox" name="sidor" id="startsida" value="startsida"><label for="startsida">Startsida</label><br> <!--Checkbox = flera rutor kan bokas--> 
                                 <input type="checkbox" name="sidor" id="produkter" value="produkter"><label for="produkter">Produkter</label><br>
                                 <input type="checkbox" name="sidor" id="feedback" value="feedback"><label for="feedback">Feedback</label><br>
                             </p>
                             <p>
-                                <label for="dropdown">Välj bäst passande alternativ:</label>
+                                <label for="dropdown">Välj bäst passande alternativ:</label> <!--Textetikett för element med ID dropdown-->
                                 <select id="dropdown" name="dropdown"> <!--Meny där endast ett av följande options kan väljas--> 
-                                <option value="design">Dålig design</option>
-                                <option value="produkter">Dåliga produkter</option>
-                                <option value="långsam">Långsam sida</option>
-                                <option value="inget" selected>Inget av ovanstående</option> <!--Förval med selected--> 
+                                <option value="design">Dålig design</option> <!--Första val-->
+                                <option value="produkter">Dåliga produkter</option> <!--Andra val-->
+                                <option value="långsam">Långsam sida</option> <!--Tredje val-->
+                                <option value="inget" selected>Inget av ovanstående</option> <!--Fjärde val som är förval med attributet selected--> 
                                 </select>
                             </p>
                             <p>
-                                <label for="övrigt">Övriga tankar:</label>
-                                <textarea id="övrigt" name="övrigt" placeholder="Skriv ditt meddelande."></textarea> <!--Större textruta--> 
+                                <label for="övrigt">Övriga tankar:</label> <!--Textetikett för element med ID övrigt-->
+                                <textarea id="övrigt" name="övrigt" placeholder="Skriv ditt meddelande."></textarea> <!--Större textruta, placeholder förhandvisar text i rutan--> 
                             </p>
                         </fieldset>
-                        <fieldset>
+                        <fieldset> <!--Grupperar relaterade fält-->
                             <p>
                                 <input value="skicka" type="submit"> <!--Skickaknapp--> 
                             </p>
@@ -90,9 +90,9 @@
                     </form>
                 </section>
             </main>
-            <footer>
-                <p>Copyright © 2024 Apple Inc. Alla rättigheter förbehålls.</p>
-                <p>Telefon: 123456789</p>
+            <footer> <!--Sidfot-->
+                <p>Copyright © 2024 Apple Inc. Alla rättigheter förbehålls.</p> <!--Stycke-->
+                <p>Telefon: 123456789</p> <!--Stycke-->
             </footer>
         </div>
     </body>
