@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <title>Slutprojekt</title>
+        <title>Feedback</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="slutprojekt.css" rel="stylesheet">
@@ -9,6 +9,7 @@
     <body id="formulär">
         <div class="wrapper">
             <header>
+                <h1>Feedback</h1>
                 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" />
                 </svg>
@@ -22,7 +23,7 @@
             </nav>
             <main>
                 <section>
-                    <form action="formulärsvar.html" method="get"> <!--Formulär, data skickas till formulärsvar.html. Data syns i urlen-->
+                    <form action="formulärsvar.html" method="post"> <!--Formulär, data skickas till formulärsvar.html. Data syns i urlen-->
                         <fieldset> <!--Grupperar relaterade fält-->
                             <legend>Vem är du?</legend> <!--Titel för grupperingen-->
                             <p>
@@ -54,7 +55,7 @@
                         <fieldset>
                             <legend>Feedback</legend>
                             <p>
-                                <label for="rating">Ange antal stjärnor:</label><br>
+                                Ange antal stjärnor:<br>
                                 <input type="radio" name="rating" id="1" value="1" checked><label for="1">1</label><br> <!--Värde bestämt. Radio = endast en punkt av följande 5 kan markeras. Checked gör att detta blir förval när sidan laddas--> 
                                 <input type="radio" name="rating" id="2" value="2"><label for="2">2</label><br>
                                 <input type="radio" name="rating" id="3" value="3"><label for="3">3</label><br>
@@ -62,7 +63,7 @@
                                 <input type="radio" name="rating" id="5" value="5"><label for="5">5</label><br>
                             </p>
                             <p>
-                                <label for="sidor">Ange vilken/vilka sidor du tyckte var dålig:</label><br>
+                                Ange vilken/vilka sidor du tyckte var dålig:<br>
                                 <input type="checkbox" name="sidor" id="startsida" value="startsida"><label for="startsida">Startsida</label><br> <!--Checkbox = flera rutor kan bokas--> 
                                 <input type="checkbox" name="sidor" id="produkter" value="produkter"><label for="produkter">Produkter</label><br>
                                 <input type="checkbox" name="sidor" id="feedback" value="feedback"><label for="feedback">Feedback</label><br>

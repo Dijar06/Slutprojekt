@@ -84,7 +84,7 @@ legend{
     font-size: larger; /*Ställer in en större fontstorlek än vanligt*/
 }
 
-input[type="submit"], svg, audio, iframe, img, a{ /*Gruppering*/
+input[type="submit"], svg, audio, iframe, img{ /*Gruppering*/
     display: block; /*Blocklayout*/
     margin: auto;
 }
@@ -102,12 +102,12 @@ p::first-letter{ /*Pseudoelement*/
     font-size: 2.5rem; /*Första bokstaven i varje stycke får storlek 2.5 gånger så mycket som rotelementet*/
 }
 
-h1{
+h2{
     text-align: center;
     font-size: 5vw;
 }
 
-h1 ~ p{ /*Syskonselektor, stycke som befinner sig efter huvudrubrik 1*/
+h2 ~ p{ /*Syskonselektor, stycke som befinner sig efter huvudrubrik 1*/
     font-size: 3vw;
     text-align: center;
     margin-left: 30%;
@@ -138,7 +138,6 @@ img{
 
 dl{
     font-size: 3vw;
-    text-align: center;
 }
 
 table,td,th{
@@ -207,12 +206,20 @@ a:active{
 
 article{
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 10px;
     margin-left: 10ch; /*Marginal på vänstra delen 10 stycken bredder på siffran 0*/
     margin-right: 10ch;
     margin-top: 5%;
     margin-bottom: 5%;
     border-radius: 1em;
+}
+
+h1{
+    display: none;
 }
 
 @media screen and (min-width: 800px){ /*Ifall skärmstorleken har större bredd än 800 pixlar gäller nedanstående regler*/
